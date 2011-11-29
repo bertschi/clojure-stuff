@@ -57,7 +57,7 @@
       result)))
 
 (defn- percent [x total]
-  (/ (int (* (/ x total) (* 100 100))) 100))
+  (float (/ (int (* (/ x total) (* 100 100))) 100)))
 
 ;; ideally a pretty printer for tables should be used here ... but it works for now
 (defn profile-report [profile-data]
